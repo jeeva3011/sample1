@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	     <link rel = "icon" href = 
+"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBR3pphUyJqEj3sWLuW9Z2jKL1QE2BOeEUDg&usqp=CAU" 
+        type = "image/x-icon">
+	<title>lic login page</title>
+	    
+
+	<style >
+		body{
+			background-color: blue;
+		}
+
+     .header {
+ 	   padding: 10px;
+       text-align: center;
+       background: white;
+       border-radius: 8px;
+       box-shadow:  0 10px 20px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.19);
+
+     }
+     .header:hover{
+     	padding: 15px;
+     }
+     img{
+     	width: 250px;
+     }
+    
+    
+     .formback{
+     	border-radius: 8px;
+     	text-align: center;
+     	padding: 50px;
+     }
+     .flabel{
+     	color: white;
+     	font-family: initial;
+     	width: 150px;
+     	display: inline-block;
+     	text-align: left;
+     }
+     input{
+     	width: 20%;
+     	border-radius: 3px;
+     	padding: 5px;
+     }
+     input:hover{
+
+     	background-color: #c9c9d4;
+     }
+     select{
+     	width: 21%;
+     	border-radius: 3px;
+     	padding: 5px;
+
+     }
+     select:hover{
+     	background-color: #c9c9d4 ;
+     }
+     .b{
+     	color: blue;
+     	font-size: 15px;
+     	padding: 12px 30px;
+     	cursor: pointer;
+     	border-radius:5px;
+     	text-align: center;
+     	background: white;
+
+     }
+     .b:hover{
+     	background-color: blue;
+     	color: white;
+     	font-size: 18px;
+     	border-color: white;
+     	box-shadow:  0 10px 20px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.19);
+
+     }
+     textarea{
+     	width: 20%;
+     	border-radius: 3px;
+     	padding: 5px;
+
+     }
+     textarea:hover{
+     	     	background-color: #c9c9d4;
+
+     }
+	</style>
+	<script>
+		function validateForm(){
+			let n = document.forms["jform"]["fname"].value;
+	        if(n == ""){
+		    alert("Name required");
+		     return false;
+	        }
+	        let e = document.forms["jform"]["femail"].value;
+	        if(e == ""){
+	        	alert("Email Id required");
+	        	return false;
+	        }
+	        let p = document.forms["jform"]["fphno"].value;
+	        if(p == ""){
+	        	alert("Enter Phone Number");
+	        	return false;
+	        }
+	        let d = document.forms["jform"]["fdob"].value;
+	        if(d == ""){
+	        	alert("Enter Date of Birth");
+	        	return false;
+	        }
+	        let a = document.forms["jform"]["faddr"].value;
+	        if(a == ""){
+	        	alert("Enter address");
+	        	return false;
+	        }
+	         let h = document.forms["jform"]["fphoto"].value;
+	        if(h == ""){
+	        	alert("Upload photo");
+	        	return false;
+	        }
+	        
+	    if(confirm("Confirm Submission?")){
+	    alert("Successfully submitted!");
+     	}
+     	else
+     	{
+     		alert("cancelled!!");
+     	}
+
+
+    }
+
+</script>
+</head>
+
+<body>
+	<div class="header"><img src="https://licindia.in/CorporateSiteDemo/media/LIC_Media/LIC_LOGO_1.png">
+</div>
+<div class="formback">
+<form name="jform" onsubmit="return validateForm()">
+	<label class="flabel" >Name:</label>
+	<input type="text"  name="fname" autocomplete="off"><br><br>
+	<label class="flabel">E-mail:</label>
+	<input type="email" name="femail" autocomplete="off"><br><br>
+	<label class="flabel">Phone Number:</label>
+	<input type="tel" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" name="fphno" autocomplete="off"><br><br>
+	<label class="flabel">Date of Birth:</label>
+	<input type="date" name="fdob"><br><br>
+	<label class="flabel">Residential Address:</label>
+	<textarea name="faddr"></textarea>
+	<br><br>
+	<label class="flabel">Gender:</label>
+    <select  name="fgender" >
+	   <option>select option</option>
+       <option value="Male">Male</option>
+       <option value="Female">Female</option>
+       <option value="Others">Others</option>
+    </select><br><br>
+	<label class="flabel">Photo:</label>
+	<input type="file" name="fphoto"><br><br>
+	<input type="submit" class="b">
+	<input type="reset" class="b">
+	
+</form>
+</div>
+
+</body>
+</html>
